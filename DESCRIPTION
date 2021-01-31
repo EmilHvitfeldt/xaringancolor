@@ -1,0 +1,20 @@
+Package: xaringancolor
+Title: Uniform Colors in Xaringan Presentations
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Emil",
+           family = "Hvitfeldt",
+           role = c("aut", "cre"),
+           email = "emilhhvitfeldt@gmail.com",
+           comment = c(ORCID = "0000-0002-0679-1945"))
+Description: Setup uniform colors in xaringan presentations to be used across
+    html, equations and code chunks.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9000
+Imports: 
+    purrr,
+    flair,
+    clipr
