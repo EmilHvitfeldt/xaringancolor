@@ -18,3 +18,5 @@ Imports:
     purrr,
     flair,
     clipr
+URL: https://github.com/EmilHvitfeldt/xaringancolor
+BugReports: https://github.com/EmilHvitfeldt/xaringancolor/issues
