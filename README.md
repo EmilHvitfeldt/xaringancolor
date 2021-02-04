@@ -29,9 +29,9 @@ names, preferably letters only, no numbers, spaces, or other characters.
 ``` r
 library(xaringancolor)
 setup_colors(
-  orange = "#EF8633",
-  blue = "#3381F7",
-  red = "red"
+  red = "red",
+  green = "green",
+  blue = "blue"
 )
 ```
 
@@ -56,16 +56,16 @@ when you use the css class.
 A LaTeX macro has been created for each color. Use them as follows
 
 ``` code
-$$\orange{Y} = a \blue{X} + b$$
+$$\red{Y} = a \blue{X} + b$$
 ```
 
-and `Y` will be colored orange and `X` will be colored blue.
+and `Y` will be colored red and `X` will be colored blue.
 
 ### Code
 
 A variable for each color has been created. These can be used directly
-in plots such as with `geom_abline(..., color = orange)` but they can
-also be used with **flair**.
+in plots such as with `geom_abline(..., color = red)` but they can also
+be used with **flair**.
 
 Start with a named chunk with both `include` and `eval` set to `FALSE`.
 This is the code you want to highlight
@@ -84,7 +84,7 @@ variables here to achieve uniform coloring throughout the presentation.
 ``` code
 ``{r, echo=FALSE}
 decorate("mtcars_mean") %>%
-  flair("mtcars", color = orange) %>%
+  flair("mtcars", color = red) %>%
   flair("mean", color = blue)
 ``
 ```
@@ -100,24 +100,20 @@ section uses [Mathjax](https://www.mathjax.org/) to generate LaTeX
 macros which allow us to use colors in the equations.
 
 ``` code
-$$\require{color}\definecolor{orange}{rgb}{0.937254901960784, 0.525490196078431, 0.2}$$
-$$\require{color}\definecolor{blue}{rgb}{0.2, 0.505882352941176, 0.968627450980392}$$
+<div style = "position:fixed; visibility: hidden">
 $$\require{color}\definecolor{red}{rgb}{1, 0, 0}$$
+$$\require{color}\definecolor{green}{rgb}{0, 1, 0}$$
+$$\require{color}\definecolor{blue}{rgb}{0, 0, 1}$$
+</div>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   TeX: {
     Macros: {
-
-
-     orange: ["{\\color{orange}{#1}}", 1],
-
-     blue: ["{\\color{blue}{#1}}", 1],
-
-     red: ["{\\color{red}{#1}}", 1]
-
-
-  },
+      red: ["{\\color{red}{#1}}", 1],
+      green: ["{\\color{green}{#1}}", 1],
+      blue: ["{\\color{blue}{#1}}", 1]
+    },
     loader: {load: ['[tex]/color']},
     tex: {packages: {'[+]': ['color']}}
   }
@@ -130,9 +126,9 @@ can use them in the html text.
 
 ``` code
 <style>
-.orange {color: #EF8633;}
-.blue {color: #3381F7;}
 .red {color: #FF0000;}
+.green {color: #00FF00;}
+.blue {color: #0000FF;}
 </style>
 ```
 
@@ -143,8 +139,8 @@ the package and defines character vectors that specify the colors.
 ``` code
 ``{r flair_color, echo=FALSE}
 library(flair)
-orange <- "#EF8633"
-blue <- "#3381F7"
 red <- "#FF0000"
+green <- "#00FF00"
+blue <- "#0000FF"
 ``
 ```

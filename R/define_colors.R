@@ -14,5 +14,9 @@ define_color <- function(name, color) {
 }
 
 define_colors <- function(colors) {
-  purrr::imap_chr(colors, ~define_color(.y, .x))
+  c(
+    "<div style = \"position:fixed; visibility: hidden\">",
+    purrr::imap_chr(colors, ~define_color(.y, .x)),
+    "</div>"
+  )
 }
