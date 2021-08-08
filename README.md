@@ -15,7 +15,7 @@ You can install the package with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("EmilHvitfeldt/augassign")
+devtools::install_github("EmilHvitfeldt/xaringancolor")
 ```
 
 This package will most likely never be put on CRAN.
@@ -121,8 +121,8 @@ MathJax.Hub.Config({
 </script>
 ```
 
-The third section defines a &lt;style&gt; tag with sets the colors so we
-can use them in the html text.
+The third section defines a \<style> tag with sets the colors so we can
+use them in the html text.
 
 ``` code
 <style>

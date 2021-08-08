@@ -26,7 +26,7 @@ You can install the package with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("EmilHvitfeldt/augassign")
+devtools::install_github("EmilHvitfeldt/xaringancolor")
 ```
 
 This package will most likely never be put on CRAN.
